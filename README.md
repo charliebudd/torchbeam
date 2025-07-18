@@ -3,7 +3,7 @@ TorchBeam aims to provide high performance GPU video streaming with an intuative
 The package can be used to capture video feeds, encode and decode video files, and display video in a GUI all while keeping data strictly on the GPU where possible.
 
 ## Support
-Currently, torchbeam has limited support in a number of areas and <ins>very likely does nto support your usecase</ins>. Contributions to expand support are welcome.
+Currently, torchbeam is a proof of concept and has very limited support in a number of areas and <ins>very likely does nto support your usecase</ins>. Contributions to expand support are welcome.
 
 ## Installation
 Due to dependency issues with cuda and pytorch, installation currently requires compiling from source.
