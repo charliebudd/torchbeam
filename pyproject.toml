@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=69.5.1", "wheel", "numpy>2.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "torchbeam"
+version = "0.0.1"
+description = "High-performance video streaming with PyTorch."
+readme = "README.md"
+requires-python = ">=3.8"
+license = { text = "MIT" }
+authors = [{ name = "Charlie Budd", email = "charles.budd@kcl.ac.uk" }]
+dependencies = [
+    "numpy>2.0",
+    "kivy==2.3.0",
+]
+
+[tool.setuptools]
+package-dir = { "" = "src" }
+
+[tool.setuptools.packages.find]
+where = ["src"]
