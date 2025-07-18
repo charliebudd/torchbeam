@@ -62,6 +62,7 @@ PYBIND11_MODULE(torchbeam_ext, m) {
     pybind11::class_<TorchVideoDecoder>(m, "TorchVideoDecoder")
         .def(pybind11::init<std::string, std::string>())
         .def("getMetadata", &TorchVideoDecoder::getMetadata)
+        .def("frameSize", &TorchVideoDecoder::frameSize)
         .def("readFrame", &TorchVideoDecoder::readFrame)
         .def("close", &TorchVideoDecoder::close);
 }

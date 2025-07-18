@@ -21,6 +21,7 @@ public:
     ~TorchVideoDecoder();
 
     std::string getMetadata();
+    std::pair<int, int> frameSize();
     std::pair<torch::Tensor, std::string> readFrame();
     void close();
 

@@ -55,6 +55,11 @@ std::string TorchVideoDecoder::getMetadata() {
     AVDictionaryEntry* entry = av_dict_get(m_formatContext->metadata, "torchbeam_metadata", NULL, 0);
     return std::string(entry->value);
 }
+
+std::pair<int, int> TorchVideoDecoder::frameSize() {
+    return std::pair(m_codecContext->height, m_codecContext->width);
+}
+
 std::pair<torch::Tensor, std::string> TorchVideoDecoder::readFrame() {
 
     int ret = 0;
