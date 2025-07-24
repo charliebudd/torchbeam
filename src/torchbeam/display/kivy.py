@@ -20,9 +20,9 @@ class ImageViewer(BoxLayout):
 
         # Grayscale to rgb
         if image.ndim == 2:
-            image.unsqueeze(0)
+            image = image.unsqueeze(0)
         if image.size(0) == 1:
-            image = torch.stack(3 * [image])
+            image = torch.cat(3 * [image])
 
         # Formatting tensor for OpenGL texture
         if image.is_floating_point():
