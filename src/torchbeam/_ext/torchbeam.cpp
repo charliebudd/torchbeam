@@ -39,7 +39,8 @@ public:
 PYBIND11_MODULE(torchbeam_ext, m) {
     
     m.attr("PIXEL_FORMAT_MONO8") = py::int_(static_cast<int>(PixelFormat::Mono8));
-    m.attr("PIXEL_FORMAT_MONO10p") = py::int_(static_cast<int>(PixelFormat::Mono10p));
+    m.attr("PIXEL_FORMAT_MONO10P") = py::int_(static_cast<int>(PixelFormat::Mono10p));
+    m.attr("PIXEL_FORMAT_BAYERRG10P") = py::int_(static_cast<int>(PixelFormat::BayerRG10p));
 
     pybind11::class_<TorchCameraBinding>(m, "Camera")
         .def(pybind11::init<PixelFormat, bool, bool>())

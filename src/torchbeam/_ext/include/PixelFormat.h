@@ -2,15 +2,17 @@
 
 enum class PixelFormat {
     Mono8 = 0,
-    Mono10p = 1
+    Mono10p = 1,
+    BayerRG10p = 2,
 };
 
 constexpr const char* PF_TO_STRINGS[3] = {
     "Mono8",
-    "Mono10p"
+    "Mono10p",
+    "BayerRG10p"
 };
 
-constexpr int PF_TO_BITS[3] = {8, 10};
+constexpr int PF_TO_BITS[3] = {8, 10, 10};
 
 constexpr bool pixelFormatIs8Bit(PixelFormat pixelFormat) {
     return pixelFormat == PixelFormat::Mono8;

@@ -9,13 +9,16 @@ __all__ = ["PixelFormat", "Camera"]
 
 class PixelFormat(Enum):
     Mono8 = ext.PIXEL_FORMAT_MONO8
-    Mono10p = ext.PIXEL_FORMAT_MONO10p
+    Mono10p = ext.PIXEL_FORMAT_MONO10P
+    BayerRG10p = ext.PIXEL_FORMAT_BAYERRG10P
 
     @staticmethod
     def maxValue(format):
         if format == PixelFormat.Mono8:
             return 255
         elif format == PixelFormat.Mono10p:
+            return 1023
+        elif format == PixelFormat.BayerRG10p:
             return 1023
 
 
