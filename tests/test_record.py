@@ -41,7 +41,7 @@ class TestVideoRecording(unittest.TestCase):
         output_frame_metadata = []
         output_frames = []
         while True:
-            image, metadata = video_reader.getFrame()
+            image, metadata = video_reader.get_frame()
             if image is None:
                 break
             output_frame_metadata.append(metadata)
